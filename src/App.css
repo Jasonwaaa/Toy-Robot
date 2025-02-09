@@ -1,0 +1,16 @@
+
+ul li{
+  list-style-type: none;
+}
+:root{
+  width: 980px;
+  height: 600px;
+  background-color: antiquewhite;
+}
+
+.App {
+  /* Add your styles here */
+  width: 100%;
+  height: 100%;
+  background-color: lightblue;
+}

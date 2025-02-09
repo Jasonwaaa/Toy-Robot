@@ -1,0 +1,12 @@
+:root{
+  width: 980px;
+  height: 600px;
+  background-color: antiquewhite;
+  margin: auto;
+  text-align: center;
+}
+nav {
+  display: flex;
+  justify-content: space-between; /* Adjust as needed */
+  align-items: center; /* Adjust as needed */
+}

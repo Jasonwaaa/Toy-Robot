@@ -1,0 +1,25 @@
+.board {
+    width: 60%;
+    background: ghostwhite;
+    padding: 8px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 500px;
+}
+
+.board .row {
+    display:flex;
+    justify-content: space-between;
+    flex:1;
+    
+}
+
+.board .row .cell {
+    flex:1;
+    line-height: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
