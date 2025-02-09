@@ -1,7 +1,4 @@
 import { JSX } from "react";
-import Robot from "../../models/robot";
-
-import { MouseEventHandler } from "react";
 interface CPanelProps {
     moveDirection: (direction: "N" | "E" | "S" | "W") => void;
   }
