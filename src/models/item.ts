@@ -1,4 +1,4 @@
-import React, { JSX } from "react";
+import { JSX } from "react";
 import Board from "./board";
 export type direction = "N" | "E" | "S" | "W";
 
@@ -8,7 +8,7 @@ abstract class Item {
     abstract direction: direction;
     abstract boardID: number;
     abstract name?: string;
-    abstract icon?: string;
+    abstract icon?: JSX.Element|null;
     abstract board: Board;
     abstract setPosition(x: number, y: number): void;
     abstract setDirection(direction: direction): void;

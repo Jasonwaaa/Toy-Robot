@@ -11,7 +11,7 @@ export default class Robot extends Item {
     direction: direction;
     board: Board;
     name: string;
-    icon: string;
+    icon: JSX.Element|null;
     
 
     moveMap: Record<direction, [number, number]> = {
@@ -28,7 +28,7 @@ export default class Robot extends Item {
         this.positionY = y;
         this.direction = direction;
         this.name = "Robot";
-        this.icon = "🤖";
+        this.icon = this.getIcon();
         this.boardID = board.produceBoardID();
     }
     getSpritePosition(direction: direction): string {

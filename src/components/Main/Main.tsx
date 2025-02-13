@@ -21,7 +21,7 @@ function Main(): JSX.Element {
     };
     board.placeItem(1, 1,robot);
     board.subscribe(updateState); // 订阅数据变化
-    }, []);
+    }, );
     console.log(board.BoardArray);
     const cellContentMapping = board.cellContentMapping;
     console.log(cellContentMapping);

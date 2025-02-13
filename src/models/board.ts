@@ -1,4 +1,5 @@
 // Purpose: This file contains the class Board which is used to represent the game board and contains the methods to place, remove and move items on the board.
+import { JSX } from 'react';
 import Item from './item'
 
 
@@ -6,7 +7,7 @@ export default class Board {
     readonly BoardArray: Array<Array<number>>=[];
     private size:number = 5;
     listeners:(()=>void)[] =[];
-    readonly cellContentMapping: Record<number, Item|null> = {
+    readonly cellContentMapping: Record<number, JSX.Element|null> = {
         0:null,
     
     }
@@ -49,7 +50,7 @@ export default class Board {
         if(this.isValidPosition(x,y) && this.BoardArray[x][y]===0){
             if(item.boardID in this.cellContentMapping){
                 this.updateBoardArray(x,y,item.boardID);
-                this.cellContentMapping[item.boardID]=item;
+                this.cellContentMapping[item.boardID]=item.icon ?? null;
                 item.setPosition(x,y);
             }else{
                 console.error("Item not found in cellContentMapping");
